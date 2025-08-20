@@ -327,7 +327,7 @@ export default {
       if (!imageLoadStatus.value[index]) return
       
       const maxRetries = 3
-      const currentStatus = imageLoadStatus.value[index]
+      let currentStatus = imageLoadStatus.value[index]
       
       if (currentStatus.retryCount >= maxRetries) {
         ElMessage.warning(`已达到最大重试次数(${maxRetries})`)
